@@ -15,12 +15,9 @@ div#app {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    //align-items: center;
     justify-content: center;
-    //background-color: blue;
 
     div.main {
-        //background-color: red;
         min-height: 50vh;
     }
 }
@@ -75,16 +72,12 @@ div.result {
         height: 100%;
 
         img {
-            //object-fit: cover;
-            //background-color: $thumbnailBgColor;
-            //border-color: $thumbnailBorderColor;
             &:hover {
                 cursor: pointer;
             }
         }
     
         &_title {
-            //background-color: rgba(255, 255, 255, 0.1);
             padding: 2px 8px 2px 8px;
             font-family: Verdana;
             font-size: 10px;
@@ -109,11 +102,5 @@ div.result {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-}
-
-#preview {
-    button.copylink {
-        
     }
 }

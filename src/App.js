@@ -20,8 +20,9 @@ const Searchbar = (props) => {
 
     const handleTextChange = (e) => {
         const re = new RegExp("^[a-zA-Z0-9 ]+$");
-        if((e.target.value == '' || re.test(e.target.value)) && e.target.value.length <= 32) {
-            setText(e.target.value);
+        const cutText = (e.target.value.length > 32 ? e.target.value.substring(0, 32) : e.target.value);
+        if(cutText == '' || re.test(cutText)) {
+            setText(cutText);
         }
     }
 
