@@ -1,0 +1,119 @@
+@import "./node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "./node_modules/bootstrap/scss/bootstrap";
+
+$bgColor: rgb(30, 30, 30);
+$thumbnailBgColor: rgba(0, 0, 0, 0.1);
+$thumbnailBorderColor: rgba(0, 0, 0, 0.2);
+$previewBgColor: rgba(250, 250, 250, 0.9);
+
+body {
+    min-height: 100%;
+    background-color: $bgColor;
+}
+
+div#app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    //align-items: center;
+    justify-content: center;
+    //background-color: blue;
+
+    div.main {
+        //background-color: red;
+        min-height: 50vh;
+    }
+}
+
+div.logo {
+    text-align: center;
+    padding: 32px 8px 32px 8px;
+    user-select: none;
+    span {
+        font-size: 2.2em;
+        //color: white;
+        font-family: 'Space Mono', monospace;
+        cursor: pointer;
+        -webkit-text-stroke: 1px #fffc;
+    }
+}
+
+div.searchbar {
+    input {
+        background-color: rgba(255, 255, 255, 0.85);
+        &:focus {
+            background-color: #fff;
+        }
+    }
+}
+
+div.result {
+    padding: 4px;
+    border: 2px solid $bgColor;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8;
+
+    // Height same as width:
+    //position: relative;
+    &:before {
+        content: '';
+        display: block;
+        padding-top: 100%;
+    }
+
+    &:hover {
+        cursor: pointer;
+        opacity: 1.0;
+    }
+
+    &_bgdiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: rgba(0, 0, 0, 0.1);
+        height: 100%;
+
+        img {
+            //object-fit: cover;
+            //background-color: $thumbnailBgColor;
+            //border-color: $thumbnailBorderColor;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    
+        &_title {
+            //background-color: rgba(255, 255, 255, 0.1);
+            padding: 2px 8px 2px 8px;
+            font-family: Verdana;
+            font-size: 10px;
+            text-align: center;
+            color: rgba(20, 20, 20, 0.8);
+        }
+    }
+}
+
+
+.modal-content {
+    background-color: $previewBgColor;
+    max-width: 100%;
+
+    .modal-header {
+        .modal-title {
+            font-size: 0.9em;
+        }
+    }
+
+    .modal-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+#preview {
+    button.copylink {
+        
+    }
+}

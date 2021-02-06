@@ -1,0 +1,9 @@
+# dependencies
+node_modules
+
+# production
+/dist
+/.cache
+
+#other
+src/config.js
